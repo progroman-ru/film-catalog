@@ -7,6 +7,7 @@ services:
         volumes:
             - ./:/var/www/film-catalog
             - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+            - ./docker/nginx/logs/:/var/logs/nginx/
         ports:
             - "8085:8085"
         depends_on:
