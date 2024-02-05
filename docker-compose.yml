@@ -17,7 +17,7 @@ services:
         container_name: app
         build:
             context: .
-            dockerfile: docker/Dockerfile
+            dockerfile: docker/php/Dockerfile
         volumes:
             - ./:/var/www/film-catalog
         depends_on:
