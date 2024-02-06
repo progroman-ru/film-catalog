@@ -10,16 +10,6 @@ git clone https://github.com/progroman-ru/film-catalog.git
 ```
 $ docker-compose up -d --build
 ```   
-3. Composer
-```
-$ composer install
-```
-4. Копируйте файл .env.example в .env
-5. Запустите миграции (--seed для заполнения начальными данными)
-```
-$ php artisan migrate --seed
-```
-6. Дайте права на запись для storage/logs, storage/framework
 
 # Использование
 1.	Запрос на получение списка фильмов с описанной ниже структурой – GET
