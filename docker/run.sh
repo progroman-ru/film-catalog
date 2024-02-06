@@ -1,5 +1,5 @@
 #!/bin/bash
-#composer install
+composer install
 if [ ! -e .env ]
 then
     cp .env.example .env
