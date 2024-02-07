@@ -29,4 +29,19 @@ class UpdateFilmRequest extends FormRequest
             'director' => 'sometimes|string|min:2|max:150',
         ];
     }
+
+    /**
+     * Надстройка экземпляра валидатора.
+     *
+     * @param  \Illuminate\Validation\Validator  $validator
+     * @return void
+     */
+    public function withValidator($validator)
+    {
+        $validator->after(function ($validator) {
+            if (empty($this->all())) {
+                $validator->errors()->add('empty', 'At least one field must be provided');
+            }
+        });
+    }
 }
